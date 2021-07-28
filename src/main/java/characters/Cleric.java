@@ -34,5 +34,9 @@ public class Cleric extends BaseCharacter{
         healingBag.remove(item);
     }
 
+    public void addHealingItem(HealingItems item){
+        this.healingBag.add(item);
+    }
+
 
 }

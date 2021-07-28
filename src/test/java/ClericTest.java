@@ -27,5 +27,11 @@ public class ClericTest {
         assertEquals(2, cleric.getHealingBag().size());
     }
 
+    @Test
+    public void canAddHealingItem(){
+        cleric.addHealingItem(HealingItems.HERBS);
+        assertEquals(4, cleric.getHealingBag().size());
+    }
+
 
 }
