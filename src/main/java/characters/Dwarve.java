@@ -43,5 +43,9 @@ public class Dwarve extends BaseCharacter {
         setBaseResistance(6);
     }
 
+    public void specialAbility(){
+        
+    }
+
 
 }

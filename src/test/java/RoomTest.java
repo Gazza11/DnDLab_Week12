@@ -30,7 +30,7 @@ public class RoomTest {
         enemies.add(enemy);
         heroes.add(wizard);
         heroes.add(dwarve);
-        room = new Room(10, enemies, heroes);
+        room = new Room(10, enemies);
     }
 
     @Test

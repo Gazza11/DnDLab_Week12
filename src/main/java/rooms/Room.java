@@ -9,14 +9,16 @@ public class Room {
 
     private int gold;
     private ArrayList<Enemy> enemies;
-    private ArrayList<BaseCharacter> heroes;
     private boolean roomCompleted;
 
-    public Room(int gold, ArrayList<Enemy> enemies, ArrayList<BaseCharacter> heroes) {
+    public Room(int gold, ArrayList<Enemy> enemies) {
         this.gold = gold;
         this.enemies = enemies;
-        this.heroes = heroes;
         this.roomCompleted = false;
+    }
+
+    public ArrayList<Enemy> getEnemies() {
+        return enemies;
     }
 
     public int getEnemiesAmount(){
@@ -49,7 +51,6 @@ public class Room {
             }
         }
     }
-
 
     public int getGold() {
         return gold;
