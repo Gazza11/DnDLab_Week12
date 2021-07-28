@@ -27,4 +27,8 @@ public class BaseCharacter {
     public int getBaseResistance() {
         return baseResistance;
     }
+
+    public void receiveDamage(int damage) {
+        this.HP -= (damage - baseResistance);
+    }
 }

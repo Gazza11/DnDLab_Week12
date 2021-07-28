@@ -31,4 +31,10 @@ public class BaseCharacterTest {
     public void hasBaseResistance(){
         assertEquals(2, baseCharacter.getBaseResistance());
     }
+
+    @Test
+    public void hasTakeDamage(){
+        baseCharacter.receiveDamage(4);
+        assertEquals(8, baseCharacter.getHP());
+    }
 }
