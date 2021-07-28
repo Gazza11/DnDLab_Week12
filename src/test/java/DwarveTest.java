@@ -66,4 +66,25 @@ public class DwarveTest {
         dwarve.addGold(8);
         assertEquals(8, dwarve.getGold());
     }
+
+    @Test
+    public void hasSpecialAbility(){ //Will eventually have cooldown and end.
+        dwarve.fortify();
+        assertEquals(8, dwarve.getBaseAttack());
+        assertEquals(6, dwarve.getBaseResistance());
+    }
+
+    @Test
+    public void canChangeArmour(){
+        dwarve.changeArmour(Armour.LEATHER);
+        assertEquals(Armour.LEATHER, dwarve.getArmour());
+        assertEquals(7, dwarve.getResistance());
+    }
+
+    @Test
+    public void canChangeWeapon(){
+        dwarve.changeWeapon(Weapon.CLUB);
+        assertEquals(Weapon.CLUB, dwarve.getWeapon());
+        assertEquals(8, dwarve.getAttack());
+    }
 }

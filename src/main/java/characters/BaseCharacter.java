@@ -24,12 +24,24 @@ public class BaseCharacter implements IAttack{
         return HP;
     }
 
+    public void healed(int heal){
+        this.HP += heal;
+    }
+
     public int getBaseAttack() {
         return baseAttack;
     }
 
+    public void setBaseAttack(int attack){
+        this.baseAttack = attack;
+    }
+
     public int getBaseResistance() {
         return baseResistance;
+    }
+
+    public void setBaseResistance(int resistance){
+        this.baseResistance = resistance;
     }
 
     public int getResistance(){
@@ -58,4 +70,5 @@ public class BaseCharacter implements IAttack{
     public void addGold(int gold) {
         this.gold += gold;
     }
+
 }

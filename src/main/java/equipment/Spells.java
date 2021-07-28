@@ -1,9 +1,9 @@
 package equipment;
 
 public enum Spells {
-    FIREBALL(6),
-    LIGHTNING(8),
-    AXII(2);
+    FIREBALL(10),
+    LIGHTNING(12),
+    AXII(4);
 
     public final int spellPower;
 
