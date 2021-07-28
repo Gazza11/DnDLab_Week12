@@ -2,7 +2,7 @@ package characters;
 
 public enum EnemyType {
 
-    ORC(18, 10, 8),//HP, BA, BR
+    ORC(12, 10, 2),//HP, BA, BR
     TROLL(25, 18, 8),
     GOBLIN(9, 5, 3);
 
