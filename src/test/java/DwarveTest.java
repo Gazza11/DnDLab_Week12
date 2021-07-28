@@ -69,7 +69,7 @@ public class DwarveTest {
 
     @Test
     public void hasSpecialAbility(){ //Will eventually have cooldown and end.
-        dwarve.fortify();
+        dwarve.specialAbility();
         assertEquals(8, dwarve.getBaseAttack());
         assertEquals(6, dwarve.getBaseResistance());
     }
@@ -87,4 +87,5 @@ public class DwarveTest {
         assertEquals(Weapon.CLUB, dwarve.getWeapon());
         assertEquals(8, dwarve.getAttack());
     }
+
 }

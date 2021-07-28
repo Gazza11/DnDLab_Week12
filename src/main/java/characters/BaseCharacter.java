@@ -7,13 +7,17 @@ public class BaseCharacter implements IAttack{
     private int baseAttack;
     private int baseResistance;
     private int gold;
+    private int maxHP;
+    private boolean dead;
 
     public BaseCharacter(String name, int HP, int baseAttack, int baseResistance) {
         this.name = name;
+        this.maxHP = HP;
         this.HP = HP;
         this.baseAttack = baseAttack;
         this.baseResistance = baseResistance;
         this.gold = 0;
+        this.dead = false;
     }
 
     public String getName() {
@@ -24,8 +28,16 @@ public class BaseCharacter implements IAttack{
         return HP;
     }
 
+    public int getMaxHP(){
+        return this.maxHP;
+    }
+
     public void healed(int heal){
-        this.HP += heal;
+        if(HP + heal > maxHP){
+            HP = maxHP;
+        }else{
+            this.HP += heal;
+        }
     }
 
     public int getBaseAttack() {
@@ -48,11 +60,15 @@ public class BaseCharacter implements IAttack{
         return getBaseResistance();
     }
 
+
     public void receiveDamage(int damage) {
         if (damage >= getResistance()) {
             this.HP -= (damage - getResistance());
+            if(HP <= 0){
+                dead = true;
+                HP = 0;
+            }
         }
-
     }
 
     public int getAttack(){
@@ -69,6 +85,18 @@ public class BaseCharacter implements IAttack{
 
     public void addGold(int gold) {
         this.gold += gold;
+    }
+
+    public boolean getDead(){
+        return this.dead;
+    }
+
+    public void setDead(){
+        this.dead = false;
+    }
+
+    public void specialAbility(){
+
     }
 
 }

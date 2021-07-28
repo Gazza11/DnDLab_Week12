@@ -33,5 +33,13 @@ public class ClericTest {
         assertEquals(4, cleric.getHealingBag().size());
     }
 
+    @Test
+    public void canRevive(){
+        dwarve.receiveDamage(100);
+        cleric.revive(dwarve);
+        assertEquals(false, dwarve.getDead());
+        assertEquals(6, dwarve.getHP());
+    }
+
 
 }

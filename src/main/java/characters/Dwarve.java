@@ -38,13 +38,9 @@ public class Dwarve extends BaseCharacter {
         return getBaseResistance() + armour.resistanceModifier;
     }
 
-    public void fortify(){
+    public void specialAbility(){
         setBaseAttack(8);
         setBaseResistance(6);
-    }
-
-    public void specialAbility(){
-        
     }
 
 

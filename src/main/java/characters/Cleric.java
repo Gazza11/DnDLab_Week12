@@ -38,5 +38,10 @@ public class Cleric extends BaseCharacter{
         this.healingBag.add(item);
     }
 
+    public void revive(BaseCharacter ally){
+        ally.setDead();
+        ally.healed(ally.getMaxHP()/2);
+    }
+
 
 }
