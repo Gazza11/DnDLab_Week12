@@ -4,6 +4,7 @@ public enum EnemyType {
 
     ORC(12, 10, 2),//HP, BA, BR
     TROLL(25, 18, 8),
+    BOSS(2200, 200, 0),
     GOBLIN(9, 5, 3);
 
     public final int hP;
