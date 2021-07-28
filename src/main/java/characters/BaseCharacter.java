@@ -1,4 +1,6 @@
-public class BaseCharacter {
+package characters;
+
+public class BaseCharacter implements IAttack{
 
     private String name;
     private int HP;
@@ -30,12 +32,23 @@ public class BaseCharacter {
         return baseResistance;
     }
 
+    public int getResistance(){
+        return getBaseResistance();
+    }
+
     public void receiveDamage(int damage) {
-        this.HP -= (damage - baseResistance);
+        if (damage >= getResistance()) {
+            this.HP -= (damage - getResistance());
+        }
+
+    }
+
+    public int getAttack(){
+        return getBaseAttack();
     }
 
     public void attack(BaseCharacter enemy) {
-        enemy.receiveDamage(getBaseAttack());
+        enemy.receiveDamage(getAttack());
     }
 
     public int getGold(){
